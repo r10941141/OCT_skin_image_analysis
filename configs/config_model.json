@@ -1,0 +1,48 @@
+{  
+  "Unet":  
+    {
+      "input_shape": [512, 512, 1],
+      "EncoderCNN": {
+        "conv_blocks": [
+          {"filters": 64, "kernel_size": [3, 3], "activation": "relu", "dropout": 0.1, "use_batchnorm": true, "maxpool": true},
+          {"filters": 128, "kernel_size": [3, 3], "activation": "relu", "dropout": 0.1, "use_batchnorm": true, "maxpool": true}
+        ]
+      },
+      "Bottleneck": {
+        "filters": 256,
+        "kernel_size": [3, 3],
+        "activation": "relu",
+        "dropout": 0.3,
+        "use_batchnorm": true
+      },
+      "DecoderCNN": {
+        "upsample_blocks": [
+          {"filters": 128, "kernel_size": [3, 3], "activation": "relu", "dropout": 0.1, "use_batchnorm": true},
+          {"filters": 64, "kernel_size": [3, 3], "activation": "relu", "dropout": 0.1, "use_batchnorm": true}
+        ]
+      },
+      "OutputLayer": {
+        "filters": 1,
+        "activation": "sigmoid"
+      }
+    },
+
+
+  "EfficientNet":  
+    {
+      "input_shape": [512, 512, 1],
+      "DecoderCNN": {
+        "upsample_blocks": [
+          { "kernel_size": [3, 3], "activation": "relu"},
+          { "kernel_size": [3, 3], "activation": "relu"}
+        ]
+      },
+      "OutputLayer": {
+        "filters": 1,
+        "activation": "sigmoid"
+      }
+    },
+  "Resnet18":{
+    
+  }
+}

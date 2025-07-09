@@ -1,0 +1,38 @@
+{
+    "segmentation_training": {
+      "input": {
+        "train_path": "./data/segmentation_training/",
+        "image_dir": "images/",
+        "label_dir": "labels/",
+        "image_format": ".png",
+        "resize_shape": [512, 512],
+        "load_fraction": 1
+      },
+      "data": {
+        "batch_size": 16,
+        "random_seed": 46
+      },
+      "output": {
+        "savefile_path_prefix": "./outputs/datafile",
+        "data_from": ""
+      }
+  },
+    "classification_training": {
+      "input": {
+        "train_path_correct": "./data/classification_training/correct/",
+        "train_path_wrong": "./data/classification_training/wrong/",
+        "image_dir": "images/",
+        "label_dir": "labels/",
+        "image_format": ".png",
+        "resize_shape": [512, 512],
+        "load_fraction": 1
+      },
+      "data": {
+        "batch_size": 16
+      },
+      "output": {
+        "savefile_path_prefix": "./outputs/datafile",
+        "data_from": ""
+      }
+  }
+}
