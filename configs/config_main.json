@@ -1,0 +1,6 @@
+{
+    "mode" :2,
+    "input_img_path" : "./data/your_img_input",
+    "input_label_path" : "./data/your_label_input",
+    "input_model_path" : "./outputs/datafile"
+}

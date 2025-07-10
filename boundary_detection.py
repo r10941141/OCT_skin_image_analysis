@@ -73,6 +73,7 @@ def smooth_boundary_edj(boundary):
 
 
 
+
 def show_boundary(image, boundary):
     plt.imshow(image, cmap='gray')
     plt.plot(np.arange(len(boundary)), boundary, color='r')
